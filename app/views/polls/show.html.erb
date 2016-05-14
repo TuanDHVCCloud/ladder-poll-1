@@ -1,2 +1,9 @@
-<h1>Polls#show</h1>
-<p>Find me in app/views/polls/show.html.erb</p>
+<div class="col-md-8">
+  <% if @polls.any? %>
+      <h3>Polls (<%= @polls.count %>)</h3>
+      <ol>
+        <%= render @polls %>
+      </ol>
+  <% end %>
+</div>
+</div>

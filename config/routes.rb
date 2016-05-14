@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
 
+  get 'options/new'
+
+  get 'options/show'
+
+  get 'options/update'
+
   root to: "static_pages#welcome"
 
   resources :sessions, only: [:create, :destroy]

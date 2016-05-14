@@ -1,0 +1,21 @@
+<li id="poll-<%= poll.id %>">
+  <div class="panel panel-primary">
+      <div class="panel-heading">
+          <h3 class="panel-title">
+              <span class="glyphicon glyphicon-arrow-right"></span><%= poll.id %>. <%= poll.content %> ><span
+                  class="glyphicon glyphicon-new-window"></span></a>
+                  <span class="timestamp">
+                    Posted <%= time_ago_in_words(poll.created_at) %> ago.
+                  </span>
+          </h3>
+        </div>
+        <div class="panel-body">
+           <ul class="list-group">
+               <li class="list-group-item">
+                    <% poll.get_list_option.each do |o| %>
+                    <%= render o %>
+                    <% end %>
+               </li>
+      </div>
+  </div>
+</li>
